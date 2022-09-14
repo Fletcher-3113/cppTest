@@ -12,7 +12,7 @@ jobs:
         uses: deep5050/cppcheck-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
+          output_file : ./cppReports/cpp_Report-GITHUB_REF_NAME.txt
 
       - name: publish report
         uses: mikeal/publish-to-github-action@master
