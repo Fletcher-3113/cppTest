@@ -6,5 +6,3 @@ Includes testing of the following GitHub Actions:
 </ul>
 
 <b>These Actions run on a self-hosted runner</b>
-
-Test
