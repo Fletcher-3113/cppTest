@@ -1,4 +1,4 @@
-name: cppcheck-action
+name: cppcheck-Action
 
 on: [push]
 
@@ -7,8 +7,9 @@ jobs:
     name: cppcheck-test
     runs-on: self-hosted
     steps:
-
-      - name: command
+      # This is required to properly clean up previous runs of Doxygen.  
+      # Without this command, Actions can not remove the 'html' and 'latex' dirs.
+      - name: Change Ownership of Doxygen Directories
         run: echo ${{ secrets.DEPLOY_PASSWORD }} | sudo -S chown -R $USER:$USER  /home/runner01/actions-runner/_work/cppTest/cppTest
 
       - uses: actions/checkout@v2
@@ -20,7 +21,7 @@ jobs:
           output_file : ./cppReports/cppReport (Run ${{ github.run_number }}) - ${{ github.actor }}
           enable: warning,performance,portability
 
-      - name: publish report
+      - name: Publish Report
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

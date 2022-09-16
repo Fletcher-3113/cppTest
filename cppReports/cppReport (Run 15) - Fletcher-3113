@@ -1,6 +1,0 @@
-testfolder1/testfile1.c:3:6: error: Array 'a[10]' accessed at index 10, which is out of bounds. [arrayIndexOutOfBounds]
-    a[10] = 0;
-     ^
-testfolder2/testfile2.c:3:6: error: Array 'a[10]' accessed at index 10, which is out of bounds. [arrayIndexOutOfBounds]
-    a[10] = 0;
-     ^
