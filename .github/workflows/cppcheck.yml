@@ -9,6 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: stop svc
+        run: sudo ./svc.sh stop
+
+      - name: start svc
+        run: sudo ./svc.sh start
+
       - name: cppcheck
         uses: deep5050/cppcheck-action@main
         with:
