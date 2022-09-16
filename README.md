@@ -1,2 +1,6 @@
 # cppTest
-A test of the cppcheck GitHub Action
+Includes testing of the following GitHub Actions:
+<ul>
+    <li>cppcheck</li>
+    <li>Doxygen</li>
+</ul>
