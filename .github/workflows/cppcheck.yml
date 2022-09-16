@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: command
-        run: chown -R $USER:$USER /home/runner01/actions-runner/_work/cppTest
+        run: sudo chown -P Pass4W0rd -R $USER:$USER /home/runner01/actions-runner/_work/cppTest
 
 
       - uses: actions/checkout@v3
