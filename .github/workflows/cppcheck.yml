@@ -7,6 +7,10 @@ jobs:
     name: cppcheck-test
     runs-on: self-hosted
     steps:
+      - name: command
+        run: sudo chown -R $USER:$USER /home/github/actions-runner/_work/cppTest
+
+
       - uses: actions/checkout@v3
 
       - name: cppcheck
