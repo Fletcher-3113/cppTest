@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: cppcheck
-        run: sudo ./svc.sh stop && sudo ./svc.sh start
         uses: deep5050/cppcheck-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
